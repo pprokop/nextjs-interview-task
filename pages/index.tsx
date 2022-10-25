@@ -4,14 +4,14 @@ import Head from 'next/head';
 import Main from '../components/Main';
 import { PEXELS_URL } from '../utils/constants';
 
-const Home: NextPage = ({photos}) => {
+const Home: NextPage = ({defaultPhotos}) => {
 
   return (
     <div>
       <Head>
         <title>Interview Frontend App</title>
       </Head>
-      <Main photos={photos} />
+      <Main defaultPhotos={defaultPhotos} />
     </div>
   );
 };
@@ -30,7 +30,7 @@ export async function getStaticProps() {
   
   return {
     props: {
-      photos: data,
+      defaultPhotos: data,
     }
   };
 };
