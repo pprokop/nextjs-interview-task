@@ -11,7 +11,7 @@ const Home: NextPage = ({photos}) => {
       <Head>
         <title>Interview Frontend App</title>
       </Head>
-      <Main photos={photos} />
+      <Main photos={photos.photos} />
     </div>
   );
 };

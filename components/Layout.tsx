@@ -1,7 +1,11 @@
 import { Container, Menu } from 'semantic-ui-react';
 import { Icon } from 'semantic-ui-react'
 
-const Layout = ({ children }) => {
+interface IChildren {
+  children: Node,
+};
+
+const Layout = ({ children } : IChildren) => {
   return (
     <>
       <Menu>
@@ -11,7 +15,7 @@ const Layout = ({ children }) => {
       <Container>
           { children }
       </Container>
-      <Container textAlign="center">
+      <Container textAlign="center" style={{marginTop: '5rem'}}>
         @Interview Frontend App 2021
       </Container>
     </>
