@@ -26,23 +26,23 @@ export const initialState: SliceState = {
 
 export const fetchPhotos = createAsyncThunk<
   PhotosResponse, // return value
-  string, // parameters
+  {}, // parameters
   {}
 >(
   'photos/fetchPhotos',
-  async phrase => {
+  async params => {
+    console.log(params)
     const { data } = await axios.get<PhotosResponse>(PEXELS_URL, {
       headers: {
         Authorization: process.env.API_KEY,
       },
-      params: {
-        query: phrase,
-      },
+      params
     });
-
+    console.log(data)
     return data;
   }
 );
+
 
 const photosDataSlice = createSlice({
   extraReducers: {
