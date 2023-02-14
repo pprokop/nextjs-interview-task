@@ -1,13 +1,28 @@
-import { Photo } from '../interfaces/photos';
+import { Container, Grid, Image } from 'semantic-ui-react';
+import { Photo, PhotosResponse } from '../interfaces/photos';
+import Modal from './Modal';
 
-const Main = ({ photos }) => {
+const Main = ({ photos }: PhotosResponse) => {
   return (
     <div>
-      <ul>
-        {photos && photos.photos.map((el: Photo) => (
-          <li key={el.id}><img src={el.src.small}/></li>
-        ))}
-      </ul>
+      <Container>
+        <Grid
+          centered
+          columns={5}
+        >
+          {photos && photos.map((photo: Photo) => (
+          <Grid.Column
+            key={photo.id}
+            textAlign="center"
+            >
+            <Modal
+              trigger={<Image src={photo.src.small} alt="" wrapped centered rounded style={{cursor: "pointer"}}/>}
+              photo={photo}
+            />
+          </Grid.Column>
+          ))}
+        </Grid>
+      </Container>
     </div>
   )
 };

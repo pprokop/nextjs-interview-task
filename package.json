@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.6.1",
+    "@types/react-dom": "^17.0.9",
+    "@types/semantic-ui": "^2.2.7",
     "axios": "^0.21.4",
     "next": "11.1.2",
     "react": "17.0.2",
@@ -19,7 +21,7 @@
     "semantic-ui-react": "^2.0.3"
   },
   "devDependencies": {
-    "@types/react": "17.0.22",
+    "@types/react": "^17.0.22",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
     "typescript": "4.4.3"

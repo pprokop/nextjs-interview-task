@@ -19,6 +19,7 @@ export const initialState: SliceState = {
     total_results: 0,
     page: 0,
     per_page: 0,
+    next_page: '',
   },
   error: '',
   loading: false,

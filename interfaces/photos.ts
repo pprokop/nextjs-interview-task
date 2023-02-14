@@ -21,8 +21,9 @@ export type Photo = {
 };
 
 export type PhotosResponse = {
-  photos: Photo[],
-  total_results: number,
-  page: number,
-  per_page: number
+  photos: Photo[];
+  total_results: number;
+  page: number;
+  per_page: number;
+  next_page: string;
 };
